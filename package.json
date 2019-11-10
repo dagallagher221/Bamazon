@@ -2,7 +2,7 @@
   "name": "bamazon",
   "version": "1.0.0",
   "description": "basic CLI storefront via nodejs and SQL",
-  "main": "bamazonCustomer.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,8 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "",
-    "mysql": ""
+    "cli-table": "^0.3.1",
+    "inquirer": "^7.0.0",
+    "mysql": "^2.17.1"
   },
   "bugs": {
     "url": "https://github.com/dagallagher221/Bamazon/issues"
