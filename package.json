@@ -1,0 +1,23 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "basic CLI storefront via nodejs and SQL",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dagallagher221/Bamazon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "",
+    "mysql": ""
+  },
+  "bugs": {
+    "url": "https://github.com/dagallagher221/Bamazon/issues"
+  },
+  "homepage": "https://github.com/dagallagher221/Bamazon#readme"
+}
