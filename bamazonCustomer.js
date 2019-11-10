@@ -5,10 +5,10 @@ var Table = require("cli-table");
 
 //Connect to mysql
 var connection = mysql.createConnection({
-    host: "localhost",
+    host: "192.168.99.100",
     port: 3306,
     user: "root",
-    password: "",
+    password: "docker",
     database: "bamazon"
 });
 
@@ -63,14 +63,14 @@ function purchasePrompt() {
 //Create function to act as a receipt
 
 function purchaseOrder(ID, amtNeeded) {
-    connnection.query('Select * FROM products WHERE item_id = ' + ID, function(err,res) {
+    connection.query('Select * FROM products WHERE item_id = ' + ID, function(err,res) {
         if(err){console.log(err)};
         if(amtNeeded <= res[0].stock_quantity) {
             var totalCost = res[0].price * amtNeeded;
             console.log("Your Game is in stock");
             console.log(res[0].product_name + "    X     " + amtNeeded);
             console.log("Total            " + totalCost);
-            connection.queryf("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + "WHERE item_id = " + ID);
+            connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + " WHERE item_id = " + ID + ";");
         } else{
             console.log("Sorry, Your Game " + res[0].product_name + " is in another Castle!");
             console.log("Come back soon, our stock is constantly updating!")
